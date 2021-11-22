@@ -1,26 +1,19 @@
-import "./styles.css";
-import { Route, Switch } from "react-router-dom";
+// Version 6 of react router
+import * as React from "react";
+import {Routes,Route} from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
 
-// import the pages that you have in your app
-import Home from "./pages/home";
-import About from "./pages/about";
-import Contacts from "./pages/contacts";
-
-export default function App() {
+function App() {
   return (
     <div className="App">
-      {/* now this is the actual routing setting */}
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/contacts">
-          <Contacts />
-        </Route>
-      </Switch>
+      <h1>Welcome to React Router!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </div>
   );
 }
+
+export default App

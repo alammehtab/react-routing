@@ -1,17 +1,18 @@
-import { Link } from "react-router-dom";
+import * as React from 'react'
+import {Link} from 'react-router-dom'
 
-const About = () => {
+function About() {
   return (
-    <div>
-      <Link to="/" exact>
-        Home
-      </Link>
-      <Link to="/contacts" style={{ marginLeft: "5px" }}>
-        Contacts
-      </Link>
-      <h1>Welcom to About page</h1>
-    </div>
+    <>
+      <main>
+        <h2>Welcome to the ABOUT page!</h2>
+        <p>You can do this, I believe in you.</p>
+      </main>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </>
   );
-};
+}
 
-export default About;
+export default About
